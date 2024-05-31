@@ -1,14 +1,12 @@
-import { useBookStore } from "./store/bookStore";
+import { useBloodStore } from "./store/bloodStore";
 const App = () => {
-  const amount = useBookStore((state) => state.amount);
-  const title = useBookStore((state) => state.author);
-  const updateAmount = useBookStore((state) => state.updateAmount);
+  const bloodGroup = useBloodStore((state) => state.bloodGroup);
+  const bloodType = useBloodStore((state) => state.bloodType);
   return (
     <div>
       <p>
-        App :{amount} {title}{" "}
+        App :{bloodGroup} {bloodType}
       </p>
-      <button onClick={() => updateAmount(10)}>Update</button>
     </div>
   );
 };
