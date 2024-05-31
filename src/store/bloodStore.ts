@@ -1,8 +1,5 @@
 import { create } from "zustand";
-interface UserBlood {
-  bloodType: string;
-  bloodGroup: string;
-}
+import { UserBlood } from "../types";
 export const useBloodStore = create<UserBlood>(() => ({
   bloodGroup: "A",
   bloodType: "positive",
