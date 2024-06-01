@@ -2,6 +2,7 @@ import {
   Button,
   Card,
   Grid,
+  Link,
   Stack,
   TextField,
   Typography,
@@ -58,6 +59,20 @@ const Login: React.FC = () => {
             Log in
           </Button>
         </Stack>
+        <Grid
+          spacing={1}
+          sx={{
+            fontWeight: "500",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-between",
+            py: 2,
+          }}
+        >
+          <Typography>Don't have an account?</Typography>
+          <Link href="/signup">Sign up!</Link>
+        </Grid>
       </Card>
     </Grid>
   );
