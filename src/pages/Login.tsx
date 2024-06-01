@@ -8,7 +8,7 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 
-const SignUp: React.FC = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
   return (
@@ -27,10 +27,10 @@ const SignUp: React.FC = () => {
             sx={{ fontWeight: "medium" }}
             color="primary"
           >
-            SignUp
+            Login
           </Typography>
           <Typography variant="h5" color="primary">
-            Please Create your account with us!
+            Welcome back chief!
           </Typography>
         </Stack>
         <Stack spacing={3}>
@@ -55,7 +55,7 @@ const SignUp: React.FC = () => {
             />
           </Grid>
           <Button variant="contained" sx={{ height: "50px" }}>
-            Sign up
+            Log in
           </Button>
         </Stack>
       </Card>
@@ -63,4 +63,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-export default SignUp;
+export default Login;

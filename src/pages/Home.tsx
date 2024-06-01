@@ -38,11 +38,14 @@ const Home: React.FC<UserBlood> = ({ bloodGroup, bloodType }) => {
       </Grid>
       <Grid item xs={12} sm={6}>
         <Card sx={styles.card}>
-          <Stack spacing={2}>
+          <Stack spacing={2} sx={{ textAlign: "center" }}>
             <Typography variant="h4" sx={{ fontWeight: "medium" }}>
               Welcome to Blood Helper
             </Typography>
-            <Button variant="contained" sx={styles.button}>
+            <Button
+              variant="contained"
+              sx={{ ...styles.button, alignSelf: "center" }}
+            >
               Login
             </Button>
             <Typography component={Link} to={"/signup"}>
