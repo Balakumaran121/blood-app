@@ -29,7 +29,7 @@ const SignUp: React.FC = () => {
           >
             SignUp
           </Typography>
-          <Typography variant="h5" color="primary">
+          <Typography variant="h5" sx={{ color: "grey" }}>
             Please Create your account with us!
           </Typography>
         </Stack>

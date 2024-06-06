@@ -6,6 +6,7 @@ import { UserBlood } from "../types";
 const styles = {
   container: {
     height: "100vh",
+    background: "whitesmoke",
   },
   redBackground: {
     background: "red",
@@ -15,6 +16,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    height: "400px",
   },
   button: {
     borderRadius: "50px",
@@ -22,6 +24,7 @@ const styles = {
   },
 };
 const Home: React.FC<UserBlood> = ({ bloodGroup, bloodType }) => {
+  console.log(bloodGroup, bloodType);
   return (
     <Grid
       container
@@ -31,14 +34,18 @@ const Home: React.FC<UserBlood> = ({ bloodGroup, bloodType }) => {
       alignItems="center"
       sx={styles.container}
     >
-      <Grid item xs={12} sm={6} sx={styles.redBackground}>
-        <Typography variant="h5">
-          {bloodGroup} {bloodType}
-        </Typography>
-      </Grid>
       <Grid item xs={12} sm={6}>
         <Card sx={styles.card}>
-          <Stack spacing={2} sx={{ textAlign: "center" }}>
+          <Stack
+            spacing={2}
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "15px",
+            }}
+          >
             <Typography variant="h4" sx={{ fontWeight: "medium" }}>
               Welcome to Blood Helper
             </Typography>
